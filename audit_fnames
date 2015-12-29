@@ -1,0 +1,15 @@
+#!/bin/bash
+# 
+# Pull directory inoformation for running R scripts on multiple files
+
+#######################################
+# Find file names of all 'audit' files and to file: 'names.txt'
+# Globals:
+#   
+# Arguments:
+#   None
+# Returns:
+#   None
+#######################################
+
+find . -type f -regex './[0-9][0-9][0-9]-audit.csv' -exec basename {} \; > names.txt
